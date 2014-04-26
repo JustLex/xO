@@ -26,9 +26,12 @@ public class MainController {
 	}
 	
 	public static void victory(Player player){
-		Toast toast = Toast.makeText(activity.getApplicationContext(), 
-				   player.getName() + " won!", Toast.LENGTH_LONG); 
-				toast.show();
+		showToast(player.getName() + " won!");
+		FieldController.cleanField();
+	}
+	
+	public static void draw(){
+		showToast("Draw!");
 		FieldController.cleanField();
 	}
 	
@@ -46,5 +49,11 @@ public class MainController {
 			}
 		});
 		FieldController.start(buttons);
+	}
+	
+	private static void showToast(String msg){
+		Toast toast = Toast.makeText(activity.getApplicationContext(), 
+				   msg, Toast.LENGTH_LONG); 
+				toast.show();
 	}
 }

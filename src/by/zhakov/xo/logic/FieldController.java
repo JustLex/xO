@@ -24,6 +24,9 @@ public class FieldController{
 		if (checkVictory(player)){
 			MainController.victory(player);
 		}
+		if (checkDraw()){
+			MainController.draw();
+		}
 	}
 	
 	private static boolean checkVictory(Player player){
@@ -41,6 +44,17 @@ public class FieldController{
 			}
 		}
 		return victory;
+	}
+	
+	private static boolean checkDraw(){
+		for (int i = 0; i < 3; i++){
+			for (int q = 0; q < 3; q++){
+				if (field.getCell(i, q) == ' '){
+					return false;
+				}
+			}
+		}
+		return true;
 	}
 	
 	public static void cleanField(){
