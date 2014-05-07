@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">TicTacToe</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <color name="player_1_color">#f04f56</color>
+    <color name="player_2_color">#65b6f4</color>
+    <string name="restart_button">Restart</string>
+</resources>
